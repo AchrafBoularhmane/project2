@@ -1,0 +1,532 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+::-webkit-scrollbar {
+    width: 5.5px;
+    background-color: #000; 
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background: #F7A90E;
+ }
+                                                           /*HOME STYLE*/
+.container{
+    position: relative;
+    padding: 0 100px;
+    min-height: 100vh;
+}
+
+.container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 27%;
+    width: 50%;
+    height: 100%;
+    background: #F7A90E;
+    z-index: -2;
+}
+.container:after{
+    content: 'Food';
+    position: absolute;
+    bottom: 20%;
+    transform: rotate(90deg);
+    left: 30%;
+    font-size: 18vw;
+    z-index: -2;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.04;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+header .Logo{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+}
+header .Logo span{
+    color: #F7A90E;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 4px 10px;
+    color: #333;
+    text-decoration: none;
+}
+header ul li a:hover,header ul li a.active {
+    color: #F7A90E;
+}
+
+header ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#111;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+header ul li a:hover:before,header ul li a.active:before{
+    width: 100%;
+    color: #fff;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.content .Text{
+    position: relative;
+    max-width: 500px;
+    margin-right: 50px;
+}
+.content .Text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #000;
+}
+.content .Text p{
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8em;
+  margin: 20px 0;
+}
+.content .Text a{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #EFE3D7;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+}
+.content .Text a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.content .Text a:hover {
+    background: #F7A90E;
+}
+.content .Img{
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background: #000;
+}
+.content .Img img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.content .Img .active{
+    display: block;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px 0;
+}
+.icons .icon, .icons .NextPrev{
+   position: relative;
+   display: flex;
+}
+.icons .icon li{
+    list-style: none;
+    margin-right: 30px;
+}
+.icons .icon li i{
+    display: inline-block;
+    max-height: 24px;
+    font-size: 30px;
+    color: #000;
+}
+.icons .icon li:hover i{
+    transform: translateY(-10px);
+    color: #F7A90E;
+}
+.icons .NextPrev  li{
+    font-size: 30px;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.icons .NextPrev li  i{
+    color: #000;
+}
+.icons .NextPrev li  i:hover{
+    color: #F7A90E;
+}
+.icons .NextPrev a li:hover{
+    opacity: 0.5;
+}
+@media (max-width:991px){
+.container{
+    padding: 10px;
+    min-height: 100vh;
+}
+.container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 50%;
+    min-height: 100vh;
+    background: #F7A90E;
+    z-index: -2;
+}
+.container:after{
+display: none;
+}
+
+header{
+    padding: 10px;
+}
+header .Logo{
+font-size: 25px;
+}
+header .Logo span{
+color: aliceblue;
+}
+ header .toggle{
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    top: 30px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+   header .toggle span{
+      position: absolute;
+      background: #000;
+      width: 50px;
+      height: 3px;
+      transition: 0.6s;
+    }
+   header .toggle .one{
+      top: 0;
+  }
+   header .toggle .two, header .toggle .three{
+      top: 16px;
+  }
+   header .toggle .four{
+      top: 30px;
+  }
+   header .active .one, header .active .four{
+      display: none;
+  }
+   header .active .two{
+      transform:rotate(45deg);
+      background: #F7A90E;
+  }
+   header .active .three{
+      transform:rotate(-45deg);
+      background: #F7A90E;
+  }
+header ul{
+    padding: 50px 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1;
+    width: 100%;
+    height:100%;
+}
+header  .active{
+    display: block;
+}
+header ul li a:hover,header ul li a.active{
+color: #fff;
+}
+header ul li a{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    text-decoration: none;
+    padding: 25px 0;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+header ul li a:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    max-width: 100%;
+    height: 4px;
+    background: #F7A90E;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition:0.5s transform;
+}
+header ul li a:hover:before{
+    transform: translateY(-50%) scaleX(1);
+    transform-origin: left;
+    transition:0.5s transform;
+}
+.content{
+    flex-direction: column-reverse;
+    padding: 0 20px;
+}
+.content .Img{
+    position: relative;
+    width: 100%;
+    max-height: 320px;
+    margin: 20px 0;
+    
+}
+
+.content .Text h2{
+    font-size: 22px;
+}
+.content .Text p{
+  font-size: 14px;
+ 
+}
+.content .Text a{
+    font-size: 12px;
+    padding: 8px;
+}
+.content .Text a:hover{
+background: #000;
+}
+
+.icons{
+    padding:  20px;
+}
+.icons .icon li i{
+font-size: 20px;
+}
+.icons .icon li i:hover{
+    color: #000;
+}
+}
+                                                           /*MENU STYLE*/
+                                                           /*ABOUT STYLE*/
+.about{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding:  100px ;
+
+}
+
+.about .ContentBx{
+    width: 50%;
+    background: transparent;
+    z-index: 1000;
+    padding-right: 10px;
+}
+.heading{
+    color: #000;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.text{
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+.about .imgBx{
+    z-index: 1000;
+    width: 50%;
+    background-image: url(./images/about.jpg);
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:991px){
+    .about{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about .ContentBx,.about .imgBx{
+        width: 100%;
+        padding: 20px 0;
+        min-height: 400px;
+        text-align: left;
+    }
+}
+                                                     /*CONTACT STYLE*/
+.contact{
+    padding:  100px 100px 50px 100px ;
+    text-align: left;
+}
+.contact1{
+    padding: 50px 100px 100px 100px;
+    display: flex;
+
+}
+.imgBx2{
+    background: url(./images/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+.RedBg{
+    width: 50%;
+
+}
+.form .inputBx{
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+.form .inputBx input{
+    width: 90%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+.form .inputBx input::placeholder{
+    color: #000;
+}
+
+.form .inputBx textarea{
+    width: 90%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px ;
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    min-height: 150px;
+    border-bottom: 2px solid #000;
+}
+.form .inputBx textarea::placeholder{
+    color: #000;
+}
+.form .inputBx input[type="submit"]{
+    width: 150px;
+    background: #F7A90E;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    border: none;
+}
+.form .inputBx input[type="submit"]:hover{
+    background: #111;
+}
+@media (max-width:991px){
+    .contact{
+        padding: 20px;
+    }
+    .contact1{
+        padding: 10px;
+        width: 100%;
+    }
+    .RedBg{
+        width: 100%;
+        float: left;
+    }
+    .ContentBx{
+        width: 100%;
+    }
+    .contact1 .imgBx2{
+        position: absolute;
+        display: none;
+    }
+   
+}
+
+
+/*FOOTER STYLE*/
+.footer{
+    background: #000;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer p{
+    color: #fff;
+}
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 10px;
+}
+.footer ul li a img{
+    filter: invert(1);
+    max-width: 20px;
+}
+@media (max-width:991px){
+    .footer{
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer ul{
+        margin-bottom: 20px;
+    }
+}
