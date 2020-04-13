@@ -343,12 +343,17 @@ background: #000;
 .icons{
     padding:  20px;
 }
-.icons .icon li i{
+.icons .icon li a i{
 font-size: 20px;
+color: #000;
 }
-.icons .icon li i:hover{
+.icons .icon li a i:hover{
     color: #000;
 }
+.icons .icon li:hover i{
+color: #fff;
+}
+
 }
                                                            /*MENU STYLE*/
                                                            /*ABOUT STYLE*/
